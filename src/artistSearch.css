@@ -1,0 +1,439 @@
+.artist-search-container{
+    position:relative;
+    width:100vw;
+    height:100vh;
+    border-top:white 2px solid;
+    color:white;
+    font-size:25px;
+}
+
+@keyframes header-fadeIn{
+    0%
+    {
+        opacity:0;
+    }
+    100%
+    {
+        opacity:1;
+    }
+}
+
+@keyframes in-from-right{
+
+    0%
+    {
+        transform:translate3d(500px,500px,500px);
+        opacity:1;
+      
+    }
+    50%
+    {
+        transform:translate3d(0px,0px,0px);
+        opacity:1;
+    }
+    100%
+    {
+        transform:translate3d(0px,0px,0px);
+        opacity:0;
+    }
+
+}
+
+@keyframes in-from-left{
+
+    0%
+    {
+        transform:translate3d(-500px,-500px,-500px);
+        opacity:1;
+    }
+    50%
+    {
+        transform:translate3d(0px,0px,0px);
+        opacity:1;
+    }
+    100%
+    {
+        transform:translate3d(0px,0px,0px);
+        opacity:0;
+    }
+
+}
+
+@keyframes in-from-top-right{
+
+    0%
+    {
+        transform:translate3d(500px,-500px,-500px);
+        opacity:1;
+    }
+    50%
+    {
+        transform:translate3d(0px,0px,0px);
+        opacity:1;
+    }
+    100%
+    {
+        transform:translate3d(0px,0px,0px);
+        opacity:0;
+    }
+
+}
+
+@keyframes in-from-bottom-right{
+
+    0%
+    {
+        transform:translate3d(-500px,500px,-500px);
+        opacity:1;
+    }
+    50%
+    {
+        transform:translate3d(0px,0px,0px);
+        opacity:1;
+    }
+    100%
+    {
+        transform:translate3d(0px,0px,0px);
+        opacity:0;
+    }
+
+}
+
+@keyframes letter-M-animation{
+    0%
+    {
+        transform:translate(-280px,50px) rotate(-70deg);
+    }
+    100%
+    {
+        transfom:translate(0px,0px) rotate(0deg);
+    }
+}
+
+@keyframes letter-U-animation{
+    0%
+    {
+        transform:translate(-70px,50px) rotate(50deg);
+    }
+    100%
+    {
+        transfom:translate(0px,0px) rotate(0deg);
+    }
+}
+
+@keyframes letter-S-animation{
+    0%
+    {
+        transform:translate(70px,100px) rotate(-30deg);
+    }
+    100%
+    {
+        transfom:translate(0px,0px) rotate(0deg);
+    }
+}
+
+@keyframes letter-I-animation{
+    0%
+    {
+        transform:translate(200px,20px) rotate(60deg)
+    }
+    100%
+    {
+        transfom:translate(0px,0px) rotate(0deg);
+    }
+}
+
+@keyframes letter-C-animation{
+    0%
+    {
+        transform:translate(280px,130px) rotate(-50deg);
+    }
+    100%
+    {
+        transfom:translate(0px,0px) rotate(0deg);
+    }
+}
+
+/*.test-animation{
+    animation-name: test;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}*/
+
+.outer-container{
+    width:100vw;
+    height:100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.94),rgba(0,0,0,0.94)), url("./NewDemoWebPage/john-matychuk-gUK3lA3K7Yo-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.music-header-container{
+    position:relative;
+    width:500px;
+    height:110px;
+    border:white solid 1px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:100px;
+
+}
+
+.music-header{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:30px;
+    color:white;
+}
+
+
+
+.cel-1{
+    position:absolute;
+    width:fit-content;
+    height:fit-content;
+    color:white;
+    opacity:0;
+    font-size:80px;
+    text-align:center;
+    perspective: 10px;
+   animation-name: in-from-right;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    animation-delay:0.3s;
+  
+
+}
+
+
+.cel-2{
+    position:absolute;
+    width:fit-content;
+    height:fit-content;
+    color:white;
+    font-size:80px;
+    text-align:center;
+    perspective: 10px;
+    animation-name: in-from-left;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    animation-delay:0.8s;
+    opacity:0;
+    
+}
+
+.cel-3{
+    position:absolute;
+    width:fit-content;
+    height:fit-content;
+    font-size:40px;
+    color:white;
+    font-size:80px;
+    text-align:center;
+    perspective: 10px;
+    animation-name: in-from-top-right;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    animation-delay:1s;
+    opacity:0;
+   
+}
+
+.cel-4{
+    position:absolute;
+    width:fit-content;
+    height:fit-content;
+    color:white;
+    font-size:80px;
+    text-align:center;
+    perspective: 10px;
+    animation-name: in-from-bottom-right;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    animation-delay:1s;
+    opacity:0;
+    
+ 
+    
+}
+
+.letter-M{
+    position:absolute;
+    font-size:100px;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    animation-name: letter-M-animation;
+    animation-duration: 4.5s;
+    animation-fill-mode: forwards;
+   /* transform:translate(-280px,50px) rotate(-70deg);*/
+    
+}
+
+.letter-M-no-animation{
+    position:absolute;
+    font-size:100px;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+   transform:translate(-280px,50px) rotate(-70deg);
+    
+}
+
+.letter-U{
+    position:absolute;
+    font-size:100px;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    animation-name: letter-U-animation;
+    animation-duration: 4.5s;
+    animation-fill-mode: forwards;
+       /*transform:translate(-70px,50px) rotate(50deg);*/
+}
+
+.letter-S{
+    position:absolute;
+    font-size:100px;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    animation-name: letter-S-animation;
+    animation-duration: 4.5s;
+    animation-fill-mode: forwards;
+  
+}
+
+.letter-I{
+    position:absolute;
+    font-size:100px;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    animation-name: letter-I-animation;
+    animation-duration: 4.5s;
+    animation-fill-mode: forwards;
+ 
+}
+
+.letter-C{
+    position:absolute;
+    font-size:100px;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    animation-name: letter-C-animation;
+    animation-duration: 4.5s;
+    animation-fill-mode: forwards;
+       
+}
+
+
+.letters-container{
+    display:inline-block;
+    position:relative;
+    width:110px;
+    height:140px;
+    color:white;
+}
+
+.letters-outer-container{
+    width:fit-content;
+    height:fit-content;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:100px;
+    border:solid white 1px;
+    background-color: black;
+    padding-left: 20px;
+}
+
+.outer-format{
+        position: absolute;
+        width:fit-content;
+        height:fit-content;
+        left: 50%;
+        transform: translate(-50%, 0);
+}
+
+@media (max-width: 1144px) {
+    .letter-M{font-size: 70px;}
+    .letter-U{font-size: 70px;}
+    .letter-S{font-size: 70px;}
+    .letter-I{font-size: 70px;}
+    .letter-C{font-size: 70px;}
+    .letters-container{
+        width:90px;
+        height:120px;
+    }
+
+    .cel-1{font-size:60px;}
+    .cel-2{font-size:60px;}
+    .cel-3{font-size:60px;}
+    .cel-4{font-size:60px;}
+
+}
+
+@media (max-width: 944px) {
+    .letter-M{font-size: 50px;}
+    .letter-U{font-size: 50px;}
+    .letter-S{font-size: 50px;}
+    .letter-I{font-size: 50px;}
+    .letter-C{font-size: 50px;}
+    .letters-container{
+        width:50px;
+        height:80px;
+    }
+
+    .cel-1{font-size:40px;}
+    .cel-2{font-size:40px;}
+    .cel-3{font-size:40px;}
+    .cel-4{font-size:40px;}
+
+}
+
+@media (max-width: 544px) {
+    .letter-M{font-size: 30px;}
+    .letter-U{font-size: 30px;}
+    .letter-S{font-size: 30px;}
+    .letter-I{font-size: 30px;}
+    .letter-C{font-size: 30px;}
+    .letters-container{
+        width:30px;
+        height:40px;
+    }
+
+    .cel-1{font-size:20px;}
+    .cel-2{font-size:20px;}
+    .cel-3{font-size:20px;}
+    .cel-4{font-size:20px;}
+
+}
+
+@media (max-width: 344px) {
+    .letter-M{font-size: 20px;}
+    .letter-U{font-size: 20px;}
+    .letter-S{font-size: 20px;}
+    .letter-I{font-size: 20px;}
+    .letter-C{font-size: 20px;}
+    .letters-container{
+        width:20px;
+        height:30px;
+    }
+
+    .cel-1{font-size:15px;}
+    .cel-2{font-size:15px;}
+    .cel-3{font-size:15px;}
+    .cel-4{font-size:15px;}
+
+}
+
+
+
+

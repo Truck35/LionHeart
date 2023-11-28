@@ -1,0 +1,314 @@
+@keyframes movie
+{
+    0%
+    {
+        transform:translateX(0px) translateY(0px) rotate(0deg);
+        
+    }
+    50%
+    {
+        transform:translateX(-30px) translateY(66px) rotate(8deg);
+    }
+100%
+{
+    transform:translateX(0px) translateY(0px) rotate(0deg);
+}
+}
+
+@keyframes movie-board-fadeOut{
+    0%
+    {
+        opacity:1;
+    }
+    100%
+    {
+        opacity:0;
+    }
+}
+
+
+
+@keyframes movie-board-fadeIn{
+    0%
+    {
+        opacity:0;
+    }
+    100%
+    {
+        opacity:1;
+    }
+}
+
+@keyframes movie-slide-up{
+    0%
+    {
+        bottom:-10000px;
+    }
+    100%
+    {
+        bottom:0px;
+    }
+}
+
+
+.movie-board-down{
+    animation-name: movie; 
+    animation-duration: 1.5s;
+
+}
+
+.movie-board-fadeOut{
+    animation-name: movie-board-fadeOut; 
+    animation-duration: 4s; 
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+}
+
+
+
+.movie-board-fadeIn{
+    animation-name: movie-board-fadeIn; 
+    animation-duration: 4s; 
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+}
+
+
+
+.film-container{
+    background-image: linear-gradient(rgba(0,0,0,0.95),rgba(0,0,0,0.95));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100vw;
+    height:100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow:hidden;
+    position:relative;  
+}
+
+.content-div{
+    width:100vw;
+    height:100vh;
+    color:white;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:5;
+    opacity:0;
+} 
+
+.background-film-image{
+    background-image: linear-gradient(rgba(0,0,0,0.94),rgba(0,0,0,0.94)),url("./NewDemoWebPage/jakob-owens-CiUR8zISX60-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100vw;
+    height:100vh;
+    padding-top:3%;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity:0;
+    position:relative;
+    animation-name: movie-board-fadeIn; 
+    animation-duration: 4s; 
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;       
+}
+
+.background-film-image_off{
+    background-image: linear-gradient(rgba(0,0,0,0.95),rgba(0,0,0,0.95)),url("./NewDemoWebPage/film-image.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity:0;
+    width:100vw;
+    height:100vh;
+    padding-top:3%;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity:0;
+    position:relative;
+    
+}
+
+.header-div{
+    width:100%;
+    height:fit-content;
+    margin-top:100px;
+}
+
+.film-header{
+    text-align:center;
+    font-size: 75px;
+    margin-top:10px;
+}
+
+.film-image-bottom-div{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    z-index:3;
+    background-image: url("./NewDemoWebPage/film-image_bottom.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: movie-board-fadeOut; 
+    animation-duration: 2.5s; 
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+}
+
+.film-image-bottom-div_off{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    z-index:3;
+    background-image: url("./NewDemoWebPage/film-image_bottom.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.layer-div{
+    position:absolute;
+    width:100vw;
+    height:100vh;
+    top:0;
+    left:0;
+
+    animation:movie-board-fadeOut 3s ease-in 2.5s forwards;
+}
+
+.layer-div_off{
+    position:absolute;
+    width:100vw;
+    height:100vh;
+    top:0;
+    left:0;
+}
+
+.film-image-top-div{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    z-index:2;
+    background-image: url("./NewDemoWebPage/film-image_top.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: movie; 
+    animation-duration: 3s;
+    animation-fill-mode: both;
+}
+
+.film-image-top-div_off{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    z-index:2;
+    background-image: url("./NewDemoWebPage/film-image_top.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.film-image-div{
+    height:100%;
+    width:100%;
+    margin:auto;
+    overflow:hidden;
+    border: white solid 1px;
+    border-radius:5px;
+}
+
+.film-content-container{
+    width:100vw;
+        height:60%;
+        margin-top:5%;
+}
+
+.film-text-div1{
+    text-align:justify;
+    font-family: Arial, Helvetica, sans-serif;
+    width:80%;
+    height:100%;
+    position:absolute;
+    padding:10%;
+    left:0px;
+    bottom:-10000px;
+    animation-name: movie-slide-up; 
+    animation-duration: 4s; 
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+}
+
+.film-text-div2{
+    text-align:justify;
+    font-family: Arial, Helvetica, sans-serif;
+    width:80%;
+    height:100%;
+    position:absolute;
+    padding:10%;
+    right:0px;
+    bottom:-10000px;
+    animation-name: movie-slide-up; 
+    animation-duration: 4s; 
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+}
+
+.film-layer{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+.blue{
+    border:blue solid 1px;
+}
+
+.header-text{
+    border:red solid 1px;
+    width:fit-content;
+    margin:auto;
+    font-size:70%;
+}
+
+.h2-center{
+    text-align:center;
+}
+
+.film-column-height{
+    height:400px;
+}
+
+.film-format-div{
+    width:100vw;
+    height:20%;
+    border: yellow solid 1px;
+}
+
+@media (max-width: 1189px) {
+    .film-container{height:110vh;}
+    .film-column-height{height:500px;}
+    .background-film-image{height:120vh;}
+  
+  }
+
+@media (max-width: 991px) {
+      .film-container{height: 170vh;}
+      .film-column-height{height:350px;}
+    }
+
+    @media (max-width: 585px) {
+        .film-container{height:270vh;}
+        .film-column-height{height: 700px;}
+      }
